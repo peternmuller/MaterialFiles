@@ -32,7 +32,7 @@ object CrashlyticsInitializer {
     }
 
     private fun verifyPackageName(): Boolean {
-        return application.packageName == "me.zhanghai.android.files"
+        return application.packageName == "fr.peternmuller.android.files"
     }
 
     @SuppressLint("PackageManagerGetSignatures")
