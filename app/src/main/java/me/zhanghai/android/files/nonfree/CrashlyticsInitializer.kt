@@ -8,7 +8,6 @@ package me.zhanghai.android.files.nonfree
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.content.pm.Signature
-import com.google.firebase.crashlytics.FirebaseCrashlytics
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import me.zhanghai.android.files.BuildConfig
@@ -20,14 +19,16 @@ object CrashlyticsInitializer {
     private val HEX_CHARS = "0123456789ABCDEF".toCharArray()
 
     fun initialize() {
+        // This logic was previously used for FirebaseCrashlytics, you can add new crash reporting
+        // service initialization here if needed or remove this function completely if not used.
         if (BuildConfig.DEBUG) {
             return
         }
         if (!verifyPackageName() || !verifySignature()) {
-            // Please, don't spam.
+            // Invalid package name or signature.
             return
         }
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
+        // FirebaseCrashlytics has been removed, so no crash reporting is initialized here.
     }
 
     private fun verifyPackageName(): Boolean {
@@ -41,7 +42,7 @@ object CrashlyticsInitializer {
         ) ?: return false
         val signatures = packageInfo.signatures ?: return false
         return signatures.size == 1 &&
-            computeCertificateFingerprint(signatures[0]) == "87:3B:9B:60:C7:7C:F7:F3:CD:5F:AE:66" +
+                computeCertificateFingerprint(signatures[0]) == "87:3B:9B:60:C7:7C:F7:F3:CD:5F:AE:66" +
                 ":D0:FE:11:2C:4A:86:97:3E:11:8E:E8:A2:9C:34:6C:4C:67:3C:97:F0"
     }
 
