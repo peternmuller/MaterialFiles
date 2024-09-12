@@ -124,7 +124,7 @@ dependencies {
     implementation ('com.hierynomus:sshj:0.35.0') {
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
     }
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.6'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.7'
     implementation 'com.leinardi.android:speed-dial:3.3.0'
     implementation ('com.rapid7.client:dcerpc:0.12.1') {
         exclude group: 'com.google.guava', module: 'guava'
@@ -133,8 +133,8 @@ dependencies {
     implementation 'com.google.guava:guava:33.3.0-android'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'com.takisoft.preferencex:preferencex:1.1.0'
-    implementation 'commons-net:commons-net:3.8.0'
-    implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
+    implementation 'commons-net:commons-net:3.11.1'
+    implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
     implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
     implementation 'dev.rikka.rikkax.preference:simplemenu-preference:1.0.3'
     implementation 'dev.rikka.shizuku:api:13.1.5'
