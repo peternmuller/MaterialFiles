@@ -37,11 +37,11 @@ android {
         generateLocaleConfig true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_21.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
     externalNativeBuild {
         cmake {
@@ -93,7 +93,7 @@ dependencies {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    def kotlinx_coroutines_version = '1.8.1'
+    def kotlinx_coroutines_version = '1.9.0'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
     implementation 'androidx.activity:activity-ktx:1.9.2'
