@@ -7,30 +7,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
-apply from: '../signing.gradle'
-
-//#ifdef NONFREE
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.google.gms:google-services:4.4.2'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.2'
-    }
-}
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
-//#endif
-
 android {
     namespace 'me.zhanghai.android.files'
     buildToolsVersion = '35.0.0'
     compileSdk 35
     ndkVersion '27.1.12297006'
     defaultConfig {
-        applicationId 'me.zhanghai.android.files'
+        applicationId 'fr.peternmuller.android.files'
         minSdk 21
         targetSdk 34
         versionCode 39
@@ -73,12 +56,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-//#ifdef NONFREE
-            firebaseCrashlytics {
-                nativeSymbolUploadEnabled true
-            }
-//#endif
         }
     }
     packagingOptions {
@@ -147,7 +124,7 @@ dependencies {
     implementation ('com.hierynomus:sshj:0.35.0') {
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
     }
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.6'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.7'
     implementation 'com.leinardi.android:speed-dial:3.3.0'
     implementation ('com.rapid7.client:dcerpc:0.12.1') {
         exclude group: 'com.google.guava', module: 'guava'
@@ -156,14 +133,8 @@ dependencies {
     implementation 'com.google.guava:guava:33.3.0-android'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'com.takisoft.preferencex:preferencex:1.1.0'
-    // Commons Net 3.9.0 started using java.time.Duration in FTPClient.
-    //noinspection GradleDependency
-    implementation 'commons-net:commons-net:3.8.0'
-    // LicensesDialog 2.2.0 pulls in androidx.webkit and uses setForceDark() instead of correctly
-    // setting colors.
-    //noinspection GradleDependency
-    implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
-    // dev.chrisbanesinsetter:insetter:0.6.0 makes inset unstable when entering immersive.
+    implementation 'commons-net:commons-net:3.11.1'
+    implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
     implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
     implementation 'dev.rikka.rikkax.preference:simplemenu-preference:1.0.3'
     implementation 'dev.rikka.shizuku:api:13.1.5'
@@ -179,7 +150,7 @@ dependencies {
     implementation 'me.zhanghai.android.appiconloader:appiconloader:1.5.0'
     implementation 'me.zhanghai.android.fastscroll:library:1.3.0'
     implementation 'me.zhanghai.android.foregroundcompat:library:1.0.2'
-    implementation 'me.zhanghai.android.libarchive:library:1.1.1'
+    implementation 'me.zhanghai.android.libarchive:library:1.1.0'
     implementation 'me.zhanghai.android.libselinux:library:2.1.0'
     implementation 'me.zhanghai.android.retrofile:library:1.1.1'
     implementation 'me.zhanghai.android.systemuihelper:library:1.0.0'
@@ -191,10 +162,4 @@ dependencies {
         }
     }
     implementation 'org.slf4j:slf4j-android:1.7.36'
-
-//#ifdef NONFREE
-    implementation platform('com.google.firebase:firebase-bom:33.1.1')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-crashlytics-ndk'
-//#endif
 }
