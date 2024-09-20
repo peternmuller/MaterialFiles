@@ -7,8 +7,7 @@ add_library(hiddenapi SHARED
 target_compile_options(hiddenapi
         PRIVATE
         -Wall
-        -Werror
-        -flto)
+        -Werror)
 
 find_library(LOG_LIBRARY log)
 add_library(syscall SHARED
@@ -16,8 +15,7 @@ add_library(syscall SHARED
 target_compile_options(syscall
         PRIVATE
         -Wall
-        -Werror
-        -flto)
+        -Werror)
 target_link_libraries(syscall
         PRIVATE
         ${LOG_LIBRARY})
