@@ -12,6 +12,10 @@ jobs:
         uses: actions/checkout@v4.1.7
         with:
           submodules: true
+      - name: Install CMake
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake=3.30.3
       - name: Set up JDK 21
         uses: actions/setup-java@v4.3.0
         with:
