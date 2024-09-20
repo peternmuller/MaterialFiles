@@ -26,7 +26,7 @@ android {
         resValue 'string', 'file_provider_authority', applicationId + '.file_provider'
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_STL=none', '-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON'
+                arguments '-DANDROID_STL=none'
             }
         }
     }
