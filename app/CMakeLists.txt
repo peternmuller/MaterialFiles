@@ -2,15 +2,17 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project(MaterialFiles C)
 
-# Enable LTO optimization
-add_compile_options(
-    -fdata-sections
-    -ffunction-sections
-    -flto
-)
-add_link_options(
-    LINKER:--gc-sections
-)
+if (NOT CMAKE_ANDROID_ARCH_ABI STREQUAL "armeabi-v7a")
+    # Enable LTO optimization for architectures other than armeabi-v7a
+    add_compile_options(
+        -fdata-sections
+        -ffunction-sections
+        -flto
+    )
+    add_link_options(
+        LINKER:--gc-sections
+    )
+endif()
 
 add_library(hiddenapi SHARED
     src/main/jni/hiddenapi.c)
