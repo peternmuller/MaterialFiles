@@ -130,7 +130,7 @@ dependencies {
     implementation 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0'
     // SMBJ 0.12.0 breaks anonymous authentication: https://github.com/hierynomus/smbj/issues/792
     //noinspection GradleDependency
-    implementation ('com.hierynomus:smbj:0.11.5') {
+    implementation ('com.hierynomus:smbj:0.13.0') {
         // org.bouncycastle:bcprov-jdk15on uses bytecode version unsupported by Jetifier, so use
         // org.bouncycastle:bcprov-jdk15to18 instead.
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
@@ -156,7 +156,7 @@ dependencies {
     // LicensesDialog 2.2.0 pulls in androidx.webkit and uses setForceDark() instead of correctly
     // setting colors.
     //noinspection GradleDependency
-    implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
+    implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
     // dev.chrisbanesinsetter:insetter:0.6.0 makes inset unstable when entering immersive.
     implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
     implementation 'dev.rikka.rikkax.preference:simplemenu-preference:1.0.3'
