@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4.2.1
         with:
           submodules: true
       - name: Set up JDK 21
@@ -33,7 +33,7 @@ jobs:
         env:
           BUILD_TOOLS_VERSION: "35.0.0"
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v4.4.3
         with:
           name: Material-Files.apk
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
