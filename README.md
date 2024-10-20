@@ -1,12 +1,12 @@
 # Material Files
 
-[本文中文版](README_zh-CN.md)
+[![Android CI](https://github.com/peternmuller/MaterialFiles/actions/workflows/android.yml/badge.svg)](https://github.com/peternmuller/MaterialFiles/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/peternmuller/MaterialFiles?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNNy43NSA2LjVhMS4yNSAxLjI1IDAgMSAwIDAgMi41IDEuMjUgMS4yNSAwIDAgMCAwLTIuNVoiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD48cGF0aCBkPSJNMi41IDFoOC40NGExLjUgMS41IDAgMCAxIDEuMDYuNDRsMTAuMjUgMTAuMjVhMS41IDEuNSAwIDAgMSAwIDIuMTJsLTguNDQgOC40NGExLjUgMS41IDAgMCAxLTIuMTIgMEwxLjQ0IDEyQTEuNDk3IDEuNDk3IDAgMCAxIDEgMTAuOTRWMi41QTEuNSAxLjUgMCAwIDEgMi41IDFabTAgMS41djguNDRsMTAuMjUgMTAuMjUgOC40NC04LjQ0TDEwLjk0IDIuNVoiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD48L3N2Zz4=&label=Release&link=https%3A%2F%2Fgithub.com%2Fpeternmuller%2FMaterialFiles%2Freleases)
+](https://github.com/peternmuller/MaterialFiles/releases)
+[![GitHub License](https://img.shields.io/github/license/peternmuller/MaterialFiles?logo=gnu&label=License&link=https%3A%2F%2Fgithub.com%2Fpeternmuller%2FMaterialFiles%2Fblob%2Fmaster%2FLICENSE)](LICENSE)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/peternmuller/MaterialFiles/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNNC43NSAxNy4yNWEuNzUuNzUgMCAwIDEgLjc1Ljc1djIuMjVjMCAuMTM4LjExMi4yNS4yNS4yNWgxMi41YS4yNS4yNSAwIDAgMCAuMjUtLjI1VjE4YS43NS43NSAwIDAgMSAxLjUgMHYyLjI1QTEuNzUgMS43NSAwIDAgMSAxOC4yNSAyMkg1Ljc1QTEuNzUgMS43NSAwIDAgMSA0IDIwLjI1VjE4YS43NS43NSAwIDAgMSAuNzUtLjc1WiIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPjxwYXRoIGQ9Ik01LjIyIDkuOTdhLjc0OS43NDkgMCAwIDEgMS4wNiAwbDQuOTcgNC45NjlWMi43NWEuNzUuNzUgMCAwIDEgMS41IDB2MTIuMTg5bDQuOTctNC45NjlhLjc0OS43NDkgMCAxIDEgMS4wNiAxLjA2bC02LjI1IDYuMjVhLjc0OS43NDkgMCAwIDEtMS4wNiAwbC02LjI1LTYuMjVhLjc0OS43NDkgMCAwIDEgMC0xLjA2WiIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPjwvc3ZnPg==&label=Downloads&link=https%3A%2F%2Fgithub.com%2Fpeternmuller%2FMaterialFiles%2Freleases)](https://github.com/peternmuller/MaterialFiles/releases)
 
-[![Android CI status](https://github.com/zhanghai/MaterialFiles/workflows/Android%20CI/badge.svg)](https://github.com/zhanghai/MaterialFiles/actions) [![GitHub release](https://img.shields.io/github/v/release/zhanghai/MaterialFiles)](https://github.com/zhanghai/MaterialFiles/releases) [![License](https://img.shields.io/github/license/zhanghai/MaterialFiles?color=blue)](LICENSE)
-
-An open source Material Design file manager, for Android 5.0+.
-
-[<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="240">](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) [<img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="240">](https://f-droid.org/packages/me.zhanghai.android.files) [<img alt="Get it on GitHub" src="https://raw.githubusercontent.com/Kunzisoft/Github-badge/main/get-it-on-github.png" width="240">](https://github.com/zhanghai/MaterialFiles/releases/latest/download/app-release-universal.apk)
+### An open source Material Design file manager, for Android 5.0+.
 
 [Help translation on Transifex](https://www.transifex.com/zhanghai/MaterialFiles/) ([Search Android & GNOME translations](https://translations.zhanghai.me/), [Microsoft language resources](https://learn.microsoft.com/en-us/globalization/reference/microsoft-language-resources), [MIME type translations](https://gitlab.freedesktop.org/xdg/shared-mime-info/-/tree/master/po))
 
@@ -27,6 +27,10 @@ An open source Material Design file manager, for Android 5.0+.
 - Linux-aware: Like [Nautilus](https://apps.gnome.org/Nautilus/), knows symbolic links, file permissions and SELinux context.
 - Robust: Uses Linux system calls under the hood, not yet another [`ls` parser](https://news.ycombinator.com/item?id=7994720).
 - Well-implemented: Built upon the right things, including [Java NIO2 File API](https://docs.oracle.com/javase/8/docs/api/java/nio/file/package-summary.html) and [LiveData](https://developer.android.com/topic/libraries/architecture/livedata).
+
+## Why a fork of Material Files?
+
+Some custom ROMs, like [SomethingOS](https://github.com/SomethingOS), include Material Files by default. However, these custom ROMs often do not fully adhere to the best practices for including third-party apps as outlined in the [Inclusion in custom ROMs](https://github.com/peternmuller/MaterialFiles?tab=readme-ov-file#inclusion-in-custom-roms) section. Specifically, they sometimes fail to avoid conflicts with the Play Store or F-Droid versions of the app. When the app is signed with a different certificate, it cannot be updated through these app stores. To address this issue, I forked the [original Material Files project](https://github.com/zhanghai/MaterialFiles) to change the package name to `fr.peternmuller.android.files`, so that users can receive updates, either by downloading them manually or through [Obtainium](https://github.com/ImranR98/Obtainium).
 
 ## Why Material Files?
 
@@ -79,4 +83,9 @@ Thank you if you choose to include Material Files in your custom ROM! However si
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    along with this program. If not, see https://www.gnu.org/licenses.
+
+
+    Copyright (C) 2024 Peter Noël Muller
+
+    Modifications made by Peter Noël Muller to the original Material Files project are licensed under the GPL-3.0 License.
