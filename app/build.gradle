@@ -6,8 +6,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-parcelize'
 
-apply from: '../signing.gradle'
-
 android {
     namespace 'me.zhanghai.android.files'
     buildToolsVersion = '37.0.0'
@@ -60,7 +58,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
     packagingOptions {
